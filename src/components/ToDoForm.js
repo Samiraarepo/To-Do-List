@@ -14,6 +14,7 @@ const ToDoForm = ({ addTask }) => {
         <div>
             <form className="form" onSubmit={handleSubmit}>
                 <input type="text" value={userInput}
+                    className="enter-task"
                     onChange={e => setUserInput(e.target.value)}
                     placeholder="Enter a Task..." />
                 <button>Add</button>
