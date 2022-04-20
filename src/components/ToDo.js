@@ -9,17 +9,18 @@ const ToDo = ({ index, todos, handleToggle, removeTask }) => {
             value={todos.id}
             key={todos.id + todos.text}
             className={todos.status === "in progress" ? "todos" : "todos strike"}
-            name="todo"
-        >
+            name="todo" >
             {todos.text}
             <div>
-            <button className="task" onClick={() => handleToggle(index)}>
-                {todos.status === "inprogress" ? <i className="far fa-square"></i>
-                    : <i className="far fa-check-square"></i>}
-            </button>
-            <button className="task" onClick={() => removeTask(index)}>
-                <i className="fa fa-xmark"></i>
-            </button>
+                <button className="task" onClick={() => handleToggle(index)}>
+
+                    {todos.status === "in progress" ? <i className="far fa-square"></i>
+                        : <i className="fas fa-check-square"></i>}
+
+                </button>
+                <button className="task" onClick={() => removeTask(index)}>
+                    <i className="fa fa-xmark"></i>
+                </button>
             </div>
         </div>
 
