@@ -1,23 +1,21 @@
 import React from 'react';
 import ToDo from './ToDo';
 
-const ToDoList = ({ toDoList, handleToggle, removeTask }) => {
-    
+const ToDoList = ({ items, handleToggle, handleRemove }) => {
+
     return (
         <div className="to-do-list">
-            {toDoList.map((todos, index) => {
-                
+            {items.map(todo => {
                 return (
-                   <ToDo
-                        index={index}
-                        todos={todos}
-                        key={todos.id}
+                    <ToDo
+                        todo={todo}
+                        key={todo.text}//?
                         handleToggle={handleToggle}
-                        removeTask={removeTask} 
+                        handleRemove={handleRemove}
                     />
                 )
             })}
-           
+
         </div>
     );
 };
