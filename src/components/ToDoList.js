@@ -9,7 +9,7 @@ const ToDoList = ({ items, handleToggle, handleRemove }) => {
                 return (
                     <ToDo
                         todo={todo}
-                        key={todo.text}//?
+                        key={todo.id}
                         handleToggle={handleToggle}
                         handleRemove={handleRemove}
                     />
